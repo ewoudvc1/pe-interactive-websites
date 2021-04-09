@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel ="stylesheet"
+          type="text/css"
+          href="opdracht.css"
+          median= "screen"/>
+    <title>Registreer</title>
+</head>
+
+<body>
+    <div id = "head">
+        <h1 id = "titel">Registreer</h1>
+        <p id = "intro">Meld je aan bij Anoroc Service, wij beschermen jou softwear tegen malwear!</p>
+    </div>
+    
+    <div id= "voornaam">
+        <label for="inputVoornaam">Voornaam </label><br/>
+        <input type="text" id="inputVoornaam" placeholder="Uw voornaam">
+    </div>  
+
+    <div id= "naam">
+        <label for="inputNaam">Naam </label><br/>
+        <input type="text" id="inputNaam" placeholder="Uw naam"> <br/>
+    </div>  
+
+    <div id = "gebruikersnaam">
+        <label for="inputGebruikersnaam">Gebruikersnaam </label><br/>
+        <input type="text" id="inputGebruikersnaam" placeholder="u911236">
+    </div>  
+
+    <div id = "email">
+        <label for="inputEmail">E-mailadres </label><br/>
+        <input type="text" id="inputEmail" placeholder="mail@example.be"> <br/>
+    </div>  
+
+    <div id = "wachtwoord">
+        <label for="inputWachtwoord">Wachtwoord </label><br/>
+        <input type="text" id="inputWachtwoord">
+    </div>  
+
+    <div id = "HerhaalWachtwoord">
+        <label for="inputHerhaalWachtwoord">Herhaal wachtwoord </label><br/>
+        <input type="text" id="inputHerhaalWachtwoord"><br/>
+    </div>    
+    
+    <div>
+        <label for="inputAdres">Adres </label><br/>
+        <input type="text" id="inputAdres" placeholder="Uw adres en huisnummer"><br/> 
+    </div> 
+
+    <div id = Land>
+        <label for="inputLand">Land </label> <br/>
+        <select name="Land" id= "inputLand">
+            <option>Kies een land</option>
+            <option value="Belgie">Antwerpen</option>
+            <option value="Nederland">Limburg</option> </option>
+            <option value="Luxemburg">Luxemburg</option> 
+        </select>
+    </div>    
+
+    <div id="Provincie">
+        <label id = LabelProvincie for="inputProvincie">Provincie</label> <br/>
+        <select name="provincie" id= "inputProvincie">
+            <option>Kies een provintie</option>
+            <option value="Antwerpen">Antwerpen</option>
+            <option value="Limburg">Limburg</option> </option>
+            <option value="Vlaams-Brabant">Vlaams-Brabant</option>
+            <option value="Oost-Vlaanderen">Oost-Vlaanderen</option>
+            <option vlaue="West-Vlaanderen">West-Vlaanderen</option>
+        </select>
+    </div>    
+    
+    <div id="Postcode">
+        <label for="inputPostcode">Postcode</label> <br/>
+        <select name="Postcode" id= "inputPostcode">
+            <option></option>
+            <option value="2400">2400</option>
+        </select>
+    </div>
+
+    <hr>
+    <div id = "CheckboxNieuwsbrief">
+        <h2>Hou me op de hoogte </h2>
+        <input type="checkbox" id="Nieuwsbrief">
+        <label for="Nieuwsbrief"> Inschrijven voor onze Nieuwsbrief</label><br>
+        <input type="checkbox" id="Voorwaarde">
+        <label for="Voorwaarde"> Ik ga akoord met de algemeene Voorwaarde</label><br>
+    </div>
+
+    <div id = "Betaling">
+        <h2>Betaling</h2>
+        <input type="radio" id="bankingapp">
+        <label for="bankingapp">Bankingapp</label> <br>
+        <input type="radio" id="Overschrijving">
+        <label for="Overschrijving">Overschrijving</label> <br>
+        <input type="radio" id="VisaCard">
+        <label for="VisaCard">Visa Card</label> <br>
+        <input type="radio" id="Paypal">
+        <label for="Paypal">Paypal</label><br>
+    </div>
+    
+    <hr>
+
+    <div>
+        <button type ="button" onclick="valedatieForm();" onclick="checkPc()"> Wave your magic wand </button>
+    </div>
+
+    <script>
+        let errors = [];
+        function valedatieForm(){
+
+            let voornaam = document.querySelector('#intputVoornaam').value; 
+            let naam  = document.querySelector('#intputNaam').value;
+            let land  = document.querySelector('#intputLand').value;
+            let provincie = document.querySelector('#intputProvincie').value;
+             
+            if(voornaam == null)
+            {
+                errors.push('Voornaam is verplicht in te vullen!');
+            }
+
+            if(naam ==  null)
+            {
+                errors.push('naam is verplicht in te vullen!');
+            }
+
+            if(land == null)
+            {
+                errors.push('Land is verplicht in te vullen!');
+            }
+
+            if(provincie == null)
+            {
+                errors.push('Provincie is verplicht in te vullen!');
+            }
+
+            validatieWachtwoord()
+            validatieEmail()
+            valedatiePayment()
+            checkPc()
+
+            alert("Yikes Errors... " + errors )  
+
+        }
+
+            function validatieWachtwoord(){
+            
+                let wachtwoord = document.querySelector('#inputWachtwoord').value; 
+                let wachtwoord2 = document.querySelector('#intputHerhaalWachtwoord').value;
+                let gebruikersnaam = document.querySelector('#inputGebruikersnaam').value;
+
+                if(length.wachtwoord >= 7 ){
+                    errors.push("Uw wachtwoord is niet lang genoeg!");
+                }
+                else if(wachtwoord =! wachtwoord2)
+                {
+                    errors.push('Je wachtwoorden moeten het zelfde zijn!');
+                }
+
+                if(length.gebruikersnaam >= 1 )
+                {
+                    errors.push('Je gebruikers naam moe minstens 1 karakter lang zijn ');
+                }
+
+            } 
+
+            function validatieEmail(){
+
+            } 
+
+            function validatiePayment(){
+
+                let betalingswijze = "";
+                let bankingapp = '#bankingapp';
+                let Overschrijving ='#Overschrijving';
+                let VisaCard = '#VisaCard';
+                let PayPal = '#Paypal'
+
+                if(bankingapp == true || Overschrijving == true || VisaCard == true || PayPal == true)
+                {
+                    if(bankingapp = true)
+                    {
+                    betalingswijze = "Bankingapp";
+                    }
+                    else if(Overschrijving = true )
+                    {
+                    betalingswijze = "Overschrijving";
+                    }
+                    else if(VisaCart)
+                    {
+                    betalingswijze ="VisaCart";
+                    }
+                    else if (Paypal = true)
+                    {
+                    betalingswijze ="PayPal";
+                    }
+
+                    alert("je betalingswijze is " + betalingswijze)
+                }
+                else
+                {
+                    errors.push('Kies een betalings methode!')
+                }
+
+            }
+
+            function checkPc(){
+
+                let postcode = document.querySelector('#intputPostcode').value;
+                if(postcode == null)
+                {
+                    errors.push('Postcode is verplicht in te vullen!');
+                }
+            }
+                   
+    </script>
+
+</body>
+
+</html>

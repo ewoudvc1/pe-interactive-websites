@@ -1,0 +1,138 @@
+h1 {
+    margin-left: 20px;
+    font-family:sans-serif;
+    color: black;
+}
+
+#intro {
+    font-weight: bolder;
+    margin-left: 20px;
+    font-family: sans-serif;
+    color: black;
+}
+
+#voornaam{
+    float: left; 
+} 
+
+#gebruikersnaam{
+    float: left;
+}
+
+#wachtwoord{
+    float: left;
+}
+
+#Land{
+    float: left;
+}
+
+#Provincie{
+    float: left;
+}
+
+#inputVoornaam{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputNaam{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputGebruikersnaam{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputEmail{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputWachtwoord{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputHerhaalWachtwoord{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputAdres{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    width: 350px;
+    font-family: sans-serif;
+}
+
+#inputLand{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputProvincie{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+#inputPostcode{
+    margin-bottom: 15px;
+    margin-top: 7px; 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+label{ 
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+#CheckboxNieuwsbrief{
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#Betaling{
+    margin-left: 40px ;
+}
+
+button{
+    margin-left: 20px;
+    height: 40px ;
+    width: 350px;
+    color: white;
+    font-family: sans-serif;
+    background-color: rgb(89, 89, 230);
+    border-radius: 4px;
+    font-size: 20 ;
+    font-size: larger;
+    border-color:rgb(89, 89, 230) ;
+
+}
+
